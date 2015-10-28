@@ -8,34 +8,27 @@ You have 30 minutes.
 
 Fork and clone this repository, then
 
-```bashs
- $ cd rails-crud-solo-assessment
- $ subl .
- $ cd rails_crud_solo_assessment
+```bash
+ $ cd rails-crud-assessment
  $ bundle install
  $ rake db:create
 ```
 
-Follow the prompts below and complete each question.  You may use any resource, other than someone else in the classroom, to help you complete the solo assessment.
+Follow the prompts below and complete each question.  You may use any resource, other than someone else in the classroom, to help you complete the solo assessment.  Add code you write to `assessment.rb`
 
-- Question 1. Create two models (and migrations):
-  +   `House` has the following properties:, name (string), motto (string), and sigil (string).
-  +   `Person` has a name (string), title (string), quote (string), image (string), and age (integer).
+- Question 1. Generate a model (`Licensee`) and migration (`db/migrate/<time stamp>_create_licensees.rb`) to hold the data in `data/licensees.csv`.  Run `rake db:migrate` to create the table.
 
-- Question 2. Use ActiveRecord to save the data from `westeros/houses.csv` in `House` objects and the data from `westeros/people.csv` in `Person` objects.
-  + Save your code in `scripts/save.rb`.
+- Question 2. Use ActiveRecord to add `Bishop, Caren, f, 63, 132, 1943-09-26, Brown, Black` into the table of licensees.
 
-- Question 3. Use ActiveRecord to retrieve all of the people greater than a certain age *or* having a specific title.
-  + Save your code in `scripts/find.rb`.
+- Question 3. Use CSV.foreach and ActiveRecord to load the data from `data/licensees.csv` into the `licensees` table.
 
-- Question 4. Change the motto of one of your houses. Look it up by its name.
-  + Save your code in `scripts/update.rb`.
+- Question 4. Use ActiveRecord to retrieve all the licensees with Hazel eye color and Brown or Black hair color.
 
-- Question 5. Kill off, er, I mean delete one of the people. Look them up by their title.
-  + Save your code in `scripts/delete.rb`
+- Question 5. Use ActiveRecord to make each of Marilynn Escobar and Chris Whaley one inch shorter. Look them up by their names.
 
+- Question 6. Use ActiveRecord to remove Dylan Rich and Teresita Myers from the table of licensees.
 
-You can test your work with `rails runner ../scripts/<script anme>.rb` from the `rails_crud_solo_assessment` directory.  Use `p` in your scripts to output any results you'd like to check.
+You can test your work, except the migration, with `rails runner assessment.rb`.  Use `p` in your script to output any results you'd like to check.
 
 Commit and push your changes.
 
