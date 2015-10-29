@@ -1,8 +1,8 @@
 ![General Assembly Logo](http://i.imgur.com/ke8USTq.png)
 
-# Solo Assessment:  An introduction to ActiveRecord
+# Assessment:  An introduction to ActiveRecord
 
-You have 30 minutes.
+You have 35 minutes.
 
 ## Instructions
 
